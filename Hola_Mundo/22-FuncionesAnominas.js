@@ -1,0 +1,31 @@
+'use strict'
+
+//funciones anonimas
+
+//una funcion que no tiene nombre
+
+var pelicula = function (nombre){
+    return "La pelicula es: " + nombre
+}
+
+
+
+//funcion callback
+
+function sumame (numero1, numero2, sumaYmuestra, sumaPorDos){
+    var sumar = numero1 + numero2;
+
+    sumaYmuestra(sumar);
+    sumaPorDos(sumar);
+
+    return sumar;
+}
+
+
+sumame(5, 7, function(dato){
+   console.log("la suma es: ", dato);
+},
+
+function (dato){
+    console.log("la suma por dos es ", (dato * 2));
+});
